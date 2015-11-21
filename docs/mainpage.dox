@@ -1,0 +1,25 @@
+/**
+* @mainpage
+*           A Library that manages process command line options.\n
+*           Options can be expressed in a short and long form or a long form only.\n
+*           i.g. "myprocess --config-file=myconfigfile.cfg"\n
+*           \n
+*           Four types of options are recognized:\n
+*           1) Boolean options: i.g. "-v" or "--verbose" or "--verbose=true"\n
+*           2) Integer options: i.g. "-i1000" or "-i 1000" or "--interval 1000" "--interval=1000"\n
+*           3) Floating point options: i.g. "-t123.45" or "-t 123.45" or "--tollerance 123.45" or "--tollerance=123.45"\n
+*           4) String options: i.g. "-cmyconfigfile.cfg" or "-c myconfigfile.cfg" or "--config-file myconfigfile.cfg" or "--config-file=myconfigfile.cfg"\n
+*           \n
+*           In a command line the same option can be written more than one time\n
+*           Use CommandLineParser::getOptionValues methods to retrive all the occurrences\n
+*           \n
+*           Long form option can be reconized even if the user write it partialy (i.g. "--toll=123.45").\n
+*           This can create ambiguity so the command line parser class check for that and throws a relevant exception.\n
+*           \n
+*           While boolean options do not require a mandatory argument, the other options need one.\n
+*           Options could be mandatory or not.\n
+*           More over all option types could be mandatory or not.\n
+*           \n
+*           @see AmbigousCommandLineOptionException class documentation for long form options ambiguty\n
+*           @see CommandLineParser documentation for mandatory option
+**/
