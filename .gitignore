@@ -1,0 +1,8 @@
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+dist
+Makefile.shared.debug
+Makefile.shared.release
+Makefile.static.debug
+Makefile.static.release
