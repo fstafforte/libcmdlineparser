@@ -45,31 +45,31 @@ CommandLineParser parser;
 
     bool helpOptionValue = parser.getOptionValue(helpOption);
     if (false == helpOptionValue) {
-      parser.checkMandatoryOptions();
 
       bool versionOptionValue = parser.getOptionValue(versionOption);
 
       if (true == versionOptionValue) {
         cout << "ver. 1.0.1\n";
-      }
+      } else {
+      	parser.checkMandatoryOptions();
     
-      bool debugOptionValue = parser.getOptionValue(debugOption);
+      	bool debugOptionValue = parser.getOptionValue(debugOption);
 
-      bool verboseOptionValue = parser.getOptionValue(verboseOption);
+      	bool verboseOptionValue = parser.getOptionValue(verboseOption);
 
-      int64_t intervalOptionValue = parser.getOptionValue(intervalOption);
+      	int64_t intervalOptionValue = parser.getOptionValue(intervalOption);
 
-      double tolleranceOptionValue = parser.getOptionValue(tolleranceOption);
+      	double tolleranceOptionValue = parser.getOptionValue(tolleranceOption);
 
-      const string& configFileOptionValue = parser.getOptionValue(configFileOption);
+      	const string& configFileOptionValue = parser.getOptionValue(configFileOption);
 
-      cout << boolalpha;
-      cout << "debugOptionValue........: " << debugOptionValue << "\n";
-      cout << "verboseOptionValue......: " << verboseOptionValue << "\n";
-      cout << "intervalOptionValue.....: " << intervalOptionValue << "\n";
-      cout << "tolleranceOptionValue...: " << tolleranceOptionValue << "\n";
-      cout << "configFileOptionValue...: " << configFileOptionValue << "\n";
-       
+      	cout << boolalpha;
+      	cout << "debugOptionValue........: " << debugOptionValue << "\n";
+      	cout << "verboseOptionValue......: " << verboseOptionValue << "\n";
+      	cout << "intervalOptionValue.....: " << intervalOptionValue << "\n";
+      	cout << "tolleranceOptionValue...: " << tolleranceOptionValue << "\n";
+      	cout << "configFileOptionValue...: " << configFileOptionValue << "\n";
+      }
 
     } else {
       parser.printUsage();
